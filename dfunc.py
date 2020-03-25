@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats as stats
+from sklearn.metrics import f1_score, accuracy_score
+from sklearn.metrics import confusion_matrix
 
 # EDA Functions
 def df_info(df, target, mv=0.2):
@@ -68,10 +70,10 @@ def chi_sq(df, feature='', target=''):
         print('Cannot Reject Null Hypothesis')
     print(f'Chi-Squared: {chi_2}')
     print(f'p-value: {p}\n')
-    print(f'Target True when NaN: {r_a}%')
-    print(f'Target False when NaN: {r_b}%')
-    print(f'Target True when non-null: {r_c}%')
-    print(f'Target False when non-null: {r_d}%')
+    print(f'Posting Fake when NaN: {r_a}%')
+    print(f'Posting Real when NaN: {r_b}%')
+    print(f'Posting Fake when non-null: {r_c}%')
+    print(f'Posting Real when non-null: {r_d}%')
 
 # Data Engineering Functions
 def feat_to_dum(df, feature, s_value=np.nan, pref=None):
@@ -95,3 +97,15 @@ def feat_to_dum(df, feature, s_value=np.nan, pref=None):
 
     print(f'Feature Dummied and Dropped: {feature}')
     return df
+
+# Evaluation Functions
+def get_scores(model, test_data, test_labels):
+    if len(test_data) != len(test_labels):
+        return 'Data shapes incorrect'
+
+    preds = model.predict(test_data)
+    test_f1 = f1_score(test_labels, preds)
+    test_acc = accuracy_score(test_labels, preds)
+    print('F1 Score:', test_f1)
+    print('Accuracy:', test_acc)
+    print(confusion_matrix(test_labels, preds))
