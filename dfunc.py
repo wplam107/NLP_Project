@@ -3,6 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats as stats
+import gensim
+import nltk
+from gensim.utils import simple_preprocess
+from gensim.parsing.preprocessing import STOPWORDS
+from nltk.stem import WordNetLemmatizer
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 from sklearn.metrics import confusion_matrix
 
@@ -114,3 +119,14 @@ def get_scores(model, test_data, test_labels):
     print('Recall:', _rec)
     print('--------------')
     print(confusion_matrix(test_labels, preds))
+
+# NLP Functions
+def lemmatize_it(word):
+    wnl = WordNetLemmatizer()
+    return wnl.lemmatize(word, pos='v')
+
+def preprocess(text):
+    stop = gensim.parsing.preprocessing.STOPWORDS
+    tokens = gensim.utils.simple_preprocess(text)
+    result = [ lemmatize_it(token) for token in tokens if token not in stop and len(token) > 3 ]
+    return result
