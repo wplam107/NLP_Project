@@ -19,7 +19,7 @@ Most of the features were categorical and missing many values.  The only columns
 ## Baseline Models
 4 baseline models were used: Logistic Regression, RandomForest Classifier, Support Vector Classifier, XGBoost Classifier.  The baseline models were run without the text data (job 'description') as a feature.  The lack of feature interactions were expected to heavily penalize the Logistic Regression model.  All models were run inconjunction with PCA to reduce the feature space.  The primary evaluation metrics were precision and F1-Score as a job posting filter should let a few fake job postings through without filtering out too many real job postings.
 
-### Confusion Matrices (normalized predicted values) of 2 baseline models
+#### Confusion Matrices (normalized predicted values) of 2 baseline models
 ![CM of Baseline SVM (Baseline SVM)](Images/svm_b.png) ![CM of Baseline XGB (Baseline XGB)](Images/xgb_b.png)
 
 - SVM baseline model: F1-Score of 0.5248 and Precision of 0.4144
@@ -33,7 +33,7 @@ The 'description' feature was converted to tokens and a mean word vector value (
 ## Model Evaluation
 The same metrics are the baseline model were used to evaluate the final models.  SVM and XGBoost had the best F1-Score and Precision.  XGBoost had the most viable model due to making very few false positive predictions.
 
-### Confusion Matrices (normalized predicted values) of the 2 best final models
+#### Confusion Matrices (normalized predicted values) of the 2 best final models
 
 ![So Good](Images/so_good.png)
 
