@@ -1,7 +1,9 @@
 # NLP - Is the job posting Fake or Not?
 ## The Data:
 - The dataset is from Kaggle: https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction
-- Narrowed the scope to only job postings on the US market
+- Original data set can be found: http://emscad.samos.aegean.gr
+- Original data set contains 17,881 worldwide job postings
+- Narrowed the scope to only job postings for the US market
 - 10656 total observations, 740 fake and 9926 real
 - A class imbalance of Minority class: 6.85% and Majority class: 93.15%
 - 16 initial total features (4 text features, job 'description' being the text to be evaluated with NLP techniques)
@@ -21,14 +23,6 @@ Most of the features were categorical and missing many values.  The only columns
 
 Presentation Slides: 
 
-## Data and Sources
 
-Original data set contains 17,881 worldwide job postings.
 
-Data set was pruned to only explore 10,656 job postings posted in the United States of America.
 
-9,926 of the job postings are legitimate, while 730 of the job postings are fraudulent. 
-
-Data set can be found on Kaggle: https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction
-
-Original Data set can be found: http://emscad.samos.aegean.gr
