@@ -16,10 +16,15 @@
 Most of the features were categorical and missing many values.  The only columns not missing values were the job 'title' (dropped as a result of over 1000 different non-standardized titles), 'location' (dummied by state), and job 'description' (text document to be converted to a mean word vector value).  The remaining categorical features with large missing values were evaluated (dummied or dropped) with a Chi-Squared test to determine whether or not an imputed value was statistically significant in relation to the posting being fake or real.
 
 ## Baseline Models
-4 baseline models were used: Logistic Regression, RandomForest Classifier, Support Vector Classifier, XGBoost Classifier.  The baseline models were run without the text data (job 'description') as a feature.  The lack of feature interactions were expected to heavily penalize the Logistic Regression model.  All models were run inconjunction with PCA to reduce the feature space.
+4 baseline models were used: Logistic Regression, RandomForest Classifier, Support Vector Classifier, XGBoost Classifier.  The baseline models were run without the text data (job 'description') as a feature.  The lack of feature interactions were expected to heavily penalize the Logistic Regression model.  All models were run inconjunction with PCA to reduce the feature space.  The primary evaluation metrics were precision and F1-Score as a job posting filter should let a few fake job postings through without filtering out too many real job postings.
 
-### Confusion Matrices (predicted values) of the 2 best models
+### Confusion Matrices (normalized predicted values) of the 2 best models
 ![CM of Baseline SVM (Baseline SVM)](Images/svm_b.png) ![CM of Baseline XGB (Baseline XGB)](Images/xgb_b.png)
+
+- SVM baseline model: F1-Score of 0.5248 and Precision of 0.4144
+  - Had more false positives than true positives
+- XGBoost baseline model: F1-Score of 0.5121 and Precision of 0.5721
+  - Made fewer false positive predictions but did not detect true fake job postings as well
 
 Presentation Slides: 
 
