@@ -42,7 +42,7 @@ The same metrics are the baseline model were used to evaluate the final models. 
 - SVM final model: F1-Score of 0.7143 and Precision of 0.7582
   - Made far fewer false positives and only slightly more false negative predictions than the baseline model
 - XGBoost final model: F1-Score of 0.7018 and Precision of 0.9444
-  - Better scores (except accuracy) across the board
+  - Substantially better scores (except accuracy) across the board with respect to the baseline model
 
 Presentation Slides: 
 
