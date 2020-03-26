@@ -4,10 +4,10 @@
 - Original data set can be found: http://emscad.samos.aegean.gr
 - Original data set contains 17,881 worldwide job postings
 - Narrowed the scope to only job postings for the US market
-- 10656 total observations, 740 fake and 9926 real
-- A class imbalance of Minority class: 6.85% and Majority class: 93.15%
-- 16 initial total features (4 text features, job 'description' being the text to be evaluated with NLP techniques)
-- Target variable: 'fraudulent' 0 is real, 1 is fake
+  - 10656 total observations, 740 fake and 9926 real
+  - A class imbalance of Minority class: 6.85% and Majority class: 93.15%
+  - 16 initial total features (4 text features, job 'description' being the text to be evaluated with NLP techniques)
+  - Target variable: 'fraudulent' 0 is real, 1 is fake
 - Goals:
   - Perform Exploratory Data Analysis to identify key traits of job descriptions which are fraudulent in nature
   - Create a classification model that used text data features from job description postings in the United States to determine if a job posting was fraudulent or not
@@ -33,9 +33,9 @@ The 'description' feature was converted to tokens and a mean word vector value (
 ## Model Evaluation
 The same metrics are the baseline model were used to evaluate the final models.  SVM and XGBoost had the best F1-Score and Precision.  XGBoost had the most viable model due to making very few false positive predictions.
 
-#### Confusion Matrices (normalized predicted values) of the 2 best final models
-
 ![So Good](Images/so_good.png)
+
+#### Confusion Matrices (normalized predicted values) of the 2 best final models
 
 ![CM of Final SVM (Final SVM)](Images/svm_f.png) ![CM of Final XGB (Final XGB)](Images/xgb_f.png)
 
@@ -43,6 +43,10 @@ The same metrics are the baseline model were used to evaluate the final models. 
   - Made far fewer false positives and only slightly more false negative predictions than the baseline model
 - XGBoost final model: F1-Score of 0.7018 and Precision of 0.9444
   - Substantially better scores (except accuracy) across the board with respect to the baseline model
+
+## Further Exploration
+- Add TF-IDF to features (maybe now if we have time)
+- Use Neural Nets and transferred learning methods to further evaluate 'description' corpus
 
 Presentation Slides: 
 
