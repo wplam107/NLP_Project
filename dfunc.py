@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats as stats
-from sklearn.metrics import f1_score, accuracy_score
+from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 from sklearn.metrics import confusion_matrix
 
 # EDA Functions
@@ -104,8 +104,13 @@ def get_scores(model, test_data, test_labels):
         return 'Data shapes incorrect'
 
     preds = model.predict(test_data)
-    test_f1 = f1_score(test_labels, preds)
-    test_acc = accuracy_score(test_labels, preds)
-    print('F1 Score:', test_f1)
-    print('Accuracy:', test_acc)
+    _f1 = round(f1_score(test_labels, preds), 4)
+    _acc = round(accuracy_score(test_labels, preds), 4)
+    _pre = round(precision_score(test_labels, preds), 4)
+    _rec = round(recall_score(test_labels, preds), 4)
+    print('F1 Score:', _f1)
+    print('Accuracy:', _acc)
+    print('Precision:', _pre)
+    print('Recall:', _rec)
+    print('--------------')
     print(confusion_matrix(test_labels, preds))
