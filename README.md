@@ -17,7 +17,7 @@ Most of the features were categorical and missing many values.  The only columns
 
 ## Baseline Models
 4 baseline models were used: Logistic Regression, RandomForest Classifier, Support Vector Classifier, XGBoost Classifier.  The baseline models were run without the text data (job 'description') as a feature.  The lack of feature interactions were expected to bias the data against the Logistic Regression model.  All models were run inconjunction with PCA to reduce the feature space.
-![Confusion Matrix of Baseline SVM (Baseline SVM)](Images/svm_b.png)
+![CM of Baseline SVM (Baseline SVM)](Images/svm_b.png) ![CM of Baseline XGB (Baseline XGB)](Images/xgb_b.png)
 
 Presentation Slides: 
 
