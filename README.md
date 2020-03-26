@@ -30,13 +30,19 @@ Most of the features were categorical and missing many values.  The only columns
 ## NLP Feature Engineering
 The 'description' feature was converted to tokens and a mean word vector value (as an abstract sentiment vector) was returned using the Standford GloVe 50-dimensional word vector library (https://nlp.stanford.edu/projects/glove/).  The mean value vectors were then added on as features.
 
+## Model Evaluation
+The same metrics are the baseline model were used to evaluate the final models.  SVM and XGBoost had the best F1-Score and Precision.  XGBoost had the most viable model due to making very few false positive predictions.
+
 ### Confusion Matrices (normalized predicted values) of the 2 best final models
 
 ![So Good](Images/so_good.png)
 
 ![CM of Final SVM (Final SVM)](Images/svm_f.png) ![CM of Final XGB (Final XGB)](Images/xgb_f.png)
 
-- 
+- SVM final model: F1-Score of 0.7143 and Precision of 0.7582
+  - Made far fewer false positives and only slightly more false negative predictions than the baseline model
+- XGBoost final model: F1-Score of 0.7018 and Precision of 0.9444
+  - Better scores (except accuracy) across the board
 
 Presentation Slides: 
 
