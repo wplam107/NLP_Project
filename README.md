@@ -46,7 +46,8 @@ The same metrics are the baseline model were used to evaluate the final models. 
 
 ## Further Exploration
 - Add TF-IDF to features (maybe now if we have time)
-- Use Neural Nets and transferred learning methods to further evaluate 'description' corpus
+- Use Neural Nets and transferred learning methods to further evaluate 'description'
+- Deeper LDA analysis of 'description'
 
 Presentation Slides: 
 
