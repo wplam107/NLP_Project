@@ -16,8 +16,9 @@
 ## Data Cleaning, Initial Feature Engineering, and Initial EDA
 Most of the features were categorical and missing many values.  The only columns not missing values were the job 'title' (dropped as a result of over 1000 different non-standardized titles), 'location' (dummied by state), and job 'description' (text document to be converted to a mean word vector value).  The remaining categorical features with large missing values were evaluated (dummied or dropped) with a Chi-Squared test to determine whether or not an imputed value was statistically significant in relation to the posting being fake or real.
 
-(Images/F15.png)(Images/NF15.png)
-(Images/10F.png)
+![Fraudulent Bigrams](Images/F15.png) ![Non-Fraudelent Bigrams](Images/NF15.png)
+
+![Disctinct Fraud Bigrams](Images/10F.png)
 
 
 ## Baseline Models
