@@ -37,12 +37,13 @@ The same metrics are the baseline model were used to evaluate the final models. 
 
 #### Confusion Matrices (normalized predicted values) of the 2 best final models
 
-![CM of Final SVM (Final SVM)](Images/svm_f.png) ![CM of Final XGB (Final XGB)](Images/xgb_f.png)
+![CM of Final SVM (Final SVM)](Images/svm_f.png) ![CM of Final XGB (Final XGB)](Images/xgb_f.png) ![CM of WV Alone (XGB WV](Images/xgb_t.png)
 
 - SVM final model: F1-Score of 0.7143 and Precision of 0.7582
   - Made far fewer false positives and only slightly more false negative predictions than the baseline model
 - XGBoost final model: F1-Score of 0.7018 and Precision of 0.9444
   - Substantially better scores (except accuracy) across the board with respect to the baseline model
+- XGBoost with only mean word vector: F1 Score of 0.4318 and Precision of 0.9744
 
 ## Further Exploration
 - Add TF-IDF to features (maybe now if we have time)
