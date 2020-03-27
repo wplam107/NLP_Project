@@ -35,7 +35,7 @@ The same metrics are the baseline model were used to evaluate the final models. 
 
 ![So Good](Images/so_good.png)
 
-#### Confusion Matrices (normalized predicted values) of the 2 best final models
+#### Confusion Matrices (normalized predicted values) of the 2 best final models and XGBoost with the mean word vector as sole feature
 
 ![CM of Final SVM (Final SVM)](Images/svm_f.png) ![CM of Final XGB (Final XGB)](Images/xgb_f.png) ![CM of WV Alone (XGB WV](Images/xgb_t.png)
 
