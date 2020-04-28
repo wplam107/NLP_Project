@@ -1,4 +1,5 @@
 # NLP - Is the job posting Fake or Not?
+- Contributors: Raam Levy, Wayne Lam
 ## The Data:
 - The dataset is from Kaggle: https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction
 - Original data set can be found: http://emscad.samos.aegean.gr
@@ -38,8 +39,6 @@ The 'description' feature was converted to tokens and a mean word vector value (
 ## Model Evaluation
 The same metrics are the baseline model were used to evaluate the final models.  SVM and XGBoost had the best F1-Score and Precision.  XGBoost had the most viable model due to making very few false positive predictions.
 
-![So Good](Images/so_good.png)
-
 #### Confusion Matrices (normalized predicted values) of the 2 best final models and XGBoost with the mean word vector as sole feature
 
 ![CM of Final SVM (Final SVM)](Images/svm_f.png) ![CM of Final XGB (Final XGB)](Images/xgb_f.png) ![CM of WV Alone (XGB WV](Images/xgb_t.png)
@@ -54,8 +53,6 @@ The same metrics are the baseline model were used to evaluate the final models. 
 - Add TF-IDF to features (maybe now if we have time)
 - Use Neural Nets and transferred learning methods to further evaluate 'description'
 - Deeper LDA analysis of 'description'
-
-Presentation Slides: 
 
 
 
